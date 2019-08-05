@@ -26,12 +26,19 @@ SECRET_KEY = '%7$_5sge6t#sweq9e5i*58g1v6qls!pw%p=9gp&k+(9c93_dw0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = []
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'kaustubhkrishna9031@gmail.com'
-# EMAIL_HOST_PASSWORD = 'versatility2excel@619'
-# EMAIL_PORT = 587
-# EMAIL_TLS = True
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
+
+# 1 day
+ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400
+
+# or any other page
+ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+# redirects to profile page if not configured.
+LOGIN_REDIRECT_URL = '/accounts/email/'
 
 INSTALLED_APPS = [
     'main',

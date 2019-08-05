@@ -48,12 +48,5 @@ def sign_up(request):
         user.set_password(password)
         user.save()
         message = username + ' registered successfully !'
-        # send_mail(
-        #     'Email Verification',
-        #     'Please verify your email id.',
-        #     settings.EMAIL_HOST_USER,
-        #     [request.POST['email'], settings.EMAIL_HOST_USER],
-        #     fail_silently=False,
-        # )
     return render(request, 'registration.html', {'msg': message})
 
