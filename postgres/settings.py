@@ -33,13 +33,6 @@ DEBUG = True
 # EMAIL_PORT = 587
 # EMAIL_TLS = True
 
-SOCIALACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
-
-
-
-# Application definition
-
 INSTALLED_APPS = [
     'main',
     'django.contrib.admin',
