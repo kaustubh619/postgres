@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7dc65af-b1b8-46e1-b120-c4d15425c9b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/postgres/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/postgres/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,64 +15,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/postgres/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="144" column="23" selection-start-line="144" selection-start-column="23" selection-end-line="144" selection-end-column="23" />
-              <folding>
-                <element signature="e#309#318#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/static/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="718">
-              <caret line="126" column="14" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="33" column="104" selection-start-line="33" selection-start-column="104" selection-end-line="33" selection-end-column="104" />
+            <state relative-caret-position="102">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="57" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -78,6 +26,27 @@
                 <element signature="n#style#0;n#label#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/postgres/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+              <folding>
+                <element signature="e#309#318#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,9 +84,9 @@
         <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/main/static/login.css" />
         <option value="$PROJECT_DIR$/main/urls.py" />
-        <option value="$PROJECT_DIR$/main/templates/base.html" />
         <option value="$PROJECT_DIR$/main/static/styles.css" />
         <option value="$PROJECT_DIR$/main/templates/login.html" />
+        <option value="$PROJECT_DIR$/main/templates/base.html" />
         <option value="$PROJECT_DIR$/postgres/settings.py" />
       </list>
     </option>
@@ -146,12 +115,6 @@
               <item name="postgres" type="b2602c69:ProjectViewProjectNode" />
               <item name="postgres" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="postgres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="postgres" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="postgres" type="b2602c69:ProjectViewProjectNode" />
@@ -246,31 +209,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/static/styles.css">
+    <entry file="file://$PROJECT_DIR$/main/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="126" column="14" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" column="104" selection-start-line="33" selection-start-column="104" selection-end-line="33" selection-end-column="104" />
+        <state relative-caret-position="85">
+          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -285,20 +229,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/urls.py">
+    <entry file="file://$PROJECT_DIR$/main/static/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="126" column="14" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/postgres/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="144" column="23" selection-start-line="144" selection-start-column="23" selection-end-line="144" selection-end-column="23" />
+        <state relative-caret-position="442">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
             <element signature="e#309#318#0" expanded="true" />
           </folding>
