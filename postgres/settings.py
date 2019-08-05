@@ -26,7 +26,15 @@ SECRET_KEY = '%7$_5sge6t#sweq9e5i*58g1v6qls!pw%p=9gp&k+(9c93_dw0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'kaustubhkrishna9031@gmail.com'
+# EMAIL_HOST_PASSWORD = 'versatility2excel@619'
+# EMAIL_PORT = 587
+# EMAIL_TLS = True
+
+SOCIALACCOUNT_EMAIL_REQUIRED = True
+
 
 
 # Application definition
