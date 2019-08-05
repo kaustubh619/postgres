@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   color: #000000;
-  background: #34c7a2;
+  background: white;
 }
 
 a, a:hover, a:visited, a:active {
@@ -124,6 +124,6 @@ ol li ol li:nth-child(3) {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: white !Important;
+  color: black;
   text-align: center;
 }
