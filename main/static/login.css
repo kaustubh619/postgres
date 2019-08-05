@@ -195,10 +195,6 @@ input {
   #left {
     flex: 4;
   }
-
-  #right {
-    flex: 6;
-  }
 }
 
 @media (min-width: 376px) and (max-width: 768px) {
@@ -206,26 +202,12 @@ input {
     overflow: auto;
   }
 
-  #right {
-    display: none;
-  }
-
   #left {
     justify-content: start;
   }
 
   #signin .logo {
-    margin-top: 10vh;
+    margin-top: 8vh;
     margin-bottom: 2vh;
-  }
-
-  #main-footer {
-    padding-top: 15rem;
-  }
-}
-
-@media (max-width: 376px) {
-  #right {
-    display: none;
   }
 }

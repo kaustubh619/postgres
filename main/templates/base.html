@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+    <h1 style="text-align: center; margin-top: 20%">{{ request.user.username }} logged in</h1>
+    <a href="{% url 'logout' %}" style="text-decoration: none"><h2 style="text-align: center">Log Out</h2></a>
+
+</body>
+</html>
