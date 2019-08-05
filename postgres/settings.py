@@ -40,7 +40,7 @@ ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400
 ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 # redirects to profile page if not configured.
-LOGIN_REDIRECT_URL = '/accounts/email/'
+LOGIN_REDIRECT_URL = '/home'
 
 INSTALLED_APPS = [
     'main',
