@@ -30,17 +30,14 @@ ALLOWED_HOSTS = []
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-
-ACCOUNT_EMAIL_REQUIRED = True
-
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 # 1 day
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400
 # or any other page
-ACCOUNT_LOGOUT_REDIRECT_URL = 'login'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/login'
 # redirects to profile page if not configured.
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = '/facebook'
 
 
 INSTALLED_APPS = [
