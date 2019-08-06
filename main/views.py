@@ -6,9 +6,8 @@ from django.core.mail import send_mail
 from django.conf import settings
 
 
-@login_required(login_url='login')
 def home(request):
-    return render(request, 'base.html')
+    return render(request, 'home.html')
 
 
 def login_user(request):

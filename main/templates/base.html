@@ -2,31 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css\bootstrap.min.css' %}">
 </head>
-<body>
+<body style="margin-bottom: none; padding-bottom: 0px;">
 <nav class="menu">
   <ol>
-    <li class="menu-item main-menu-item"><a href="#">Home</a></li>
+    <li class="menu-item main-menu-item"><a href="{% url 'home' %}">Home</a></li>
     <li class="menu-item main-menu-item"><a href="#">About</a></li>
     <li class="menu-item main-menu-item"><a href="#">Contact</a></li>
     <li class="menu-item main-menu-item">
-      <a href="#0">User</a>
+      <a href="#">User</a>
       <ol class="sub-menu">
         <li class="menu-item"><a href="#">{{ request.user.username }}</a></li>
         <li class="menu-item"><a href="#">Reward Points</a></li>
       </ol>
     </li>
+      {% if request.user.username %}
     <li class="menu-item main-menu-item"><a href="{% url 'logout' %}">LogOut</a></li>
+      {% else %}
+    <li class="menu-item main-menu-item"><a href="{% url 'login' %}">LogIn</a></li>
+      {% endif %}
   </ol>
 </nav>
-<div class="container">
-  <div class="container-text">
-    <h1>All Contents will be here.</h1>
+<div class="mycontainer">
+  <div class="mycontainer-text">
     {% block content %}
     {% endblock %}
   </div>

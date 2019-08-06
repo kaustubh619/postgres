@@ -26,21 +26,22 @@ SECRET_KEY = '%7$_5sge6t#sweq9e5i*58g1v6qls!pw%p=9gp&k+(9c93_dw0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = []
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 ACCOUNT_EMAIL_REQUIRED = True
 
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-
-
 # 1 day
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400
-
 # or any other page
-ACCOUNT_LOGOUT_REDIRECT_URL = '/login'
-
+ACCOUNT_LOGOUT_REDIRECT_URL = 'login'
 # redirects to profile page if not configured.
-LOGIN_REDIRECT_URL = '/home'
+LOGIN_REDIRECT_URL = 'home'
+
 
 INSTALLED_APPS = [
     'main',
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
 
     'allauth',
     'allauth.account',
@@ -153,6 +155,11 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
 django_heroku.settings(locals())

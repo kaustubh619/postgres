@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  height: 100vh;
+  overflow: hidden;
   font-family: Helvetica, Arial, sans-serif;
   color: #000000;
   background: white;
@@ -112,18 +113,26 @@ ol li ol li:nth-child(3) {
   pointer-events: auto;
 }
 
-.container {
+.mycontainer {
   position: absolute;
   top: 0;
   left: 100px;
   width: calc(100% - 100px);
   height: 100vh;
 }
-.container .container-text {
-  position: absolute;
+.mycontainer .mycontainer-text {
+  margin-right: 70%;
+  position: relative;
   left: 50%;
   top: 50%;
+  right: 50%;
   transform: translate(-50%, -50%);
   color: black;
   text-align: center;
+}
+
+@media (max-width: 56.25em) {
+    .mycontainer .mycontainer-text {
+        margin-right: 20%;
+    }
 }
