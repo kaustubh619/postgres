@@ -37,7 +37,7 @@ ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400
 # or any other page
 ACCOUNT_LOGOUT_REDIRECT_URL = '/login'
 # redirects to profile page if not configured.
-LOGIN_REDIRECT_URL = '/facebook'
+LOGIN_REDIRECT_URL = '/'
 
 
 INSTALLED_APPS = [
