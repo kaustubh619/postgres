@@ -25,7 +25,7 @@ def home(request):
 
 def login_user(request):
     if request.user.username:
-        return redirect(home)
+        return redirect('/')
     message = ''
     if request.method == 'POST':
         email = request.POST['email']
@@ -36,7 +36,7 @@ def login_user(request):
             message = 'Invalid log in details!'
         else:
             login(request, user)
-            return redirect(home)
+            return redirect('/')
     return render(request, 'login.html', {'msg': message})
 
 
