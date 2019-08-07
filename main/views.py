@@ -19,7 +19,7 @@ from django.http import Http404
 
 @login_required(login_url='login')
 def home(request):
-    return render(request, 'base.html')
+    return render(request, 'home.html')
 
 
 def login_user(request):
@@ -106,7 +106,7 @@ def sign_up(request):
         to_list = [to_email]
         from_email = settings.EMAIL_HOST_USER
         send_mail(mail_subject, message, from_email, to_list, fail_silently=True)
-        return HttpResponse("<h1>Thanks for your registration. A confirmation link was sent to your email</h1>")
+        return render(request, 'econfirm_msg.html')
     return render(request, 'registration.html', {"form": form})
 
 
@@ -118,9 +118,5 @@ def activate(reqeust, uid, token):
     if user is not None and activation_token.check_token(user, token):
         user.is_active = True
         user.save()
-        return HttpResponse("<h1>Acoount is activated. No you can login - <a href='{% url 'login' %}'>LogIn</a></h1>")
-    #
-    # else:
-    #     return HttpResponse("<h1>Invalid activation link.</h3>")
-
+        return render(reqeust, 'after_confirmation_page.html')
 
