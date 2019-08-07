@@ -15,6 +15,7 @@ from django.conf import settings
 from django.views import View
 from django.shortcuts import get_object_or_404
 from django.http import Http404
+from django.contrib import messages
 
 
 @login_required(login_url='login')
@@ -89,28 +90,35 @@ def log_out(request):
 
 
 def sign_up(request):
+    msg = ''
     form = RegisterUser(request.POST or None)
     if form.is_valid():
-        instance = form.save(commit=False)
-        instance.is_active = False
-        instance.save()
-        site = get_current_site(request)
-        mail_subject = "Confirmation message for registration"
-        message = render_to_string('acc_active_email.html', {
-            "user": instance,
-            'domain': site.domain,
-            'uid': instance.id,
-            'token': activation_token.make_token(instance)
-        })
-        to_email = form.cleaned_data.get('email')
-        to_list = [to_email]
-        from_email = settings.EMAIL_HOST_USER
-        send_mail(mail_subject, message, from_email, to_list, fail_silently=True)
-        return render(request, 'econfirm_msg.html')
+        email = request.POST.get('email')
+        if User.objects.filter(email=email).exists():
+            messages.warning(request, 'Email is already exist. Try with another email')
+            msg = 'Email already exists. Try with another email'
+            return render(request, 'registration.html', {'msg': msg})
+        else:
+            instance = form.save(commit=False)
+            instance.is_active = False
+            instance.save()
+            site = get_current_site(request)
+            mail_subject = "Confirmation mail for registration"
+            message = render_to_string('acc_active_email.html', {
+                "user": instance,
+                'domain': site.domain,
+                'uid': instance.id,
+                'token': activation_token.make_token(instance)
+            })
+            to_email = form.cleaned_data.get('email')
+            to_list = [to_email]
+            from_email = settings.EMAIL_HOST_USER
+            send_mail(mail_subject, message, from_email, to_list, fail_silently=True)
+            return render(request, 'econfirm_msg.html')
     return render(request, 'registration.html', {"form": form})
 
 
-def activate(reqeust, uid, token):
+def activate(request, uid, token):
     try:
         user = get_object_or_404(User, pk=uid)
     except:
@@ -118,5 +126,5 @@ def activate(reqeust, uid, token):
     if user is not None and activation_token.check_token(user, token):
         user.is_active = True
         user.save()
-        return render(reqeust, 'after_confirmation_page.html')
+        return render(request, 'after_confirmation_page.html')
 

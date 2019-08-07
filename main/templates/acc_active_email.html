@@ -1,6 +1,6 @@
 {% autoescape off %}
 Hi {{ user.username }},
-Thanks for your registration in blog
-Please click on the link below to confirm your registration,
+Thanks for your registration.
+Please click on the link below to confirm your registration.
 http://{{ domain }}{% url 'activate' uid=uid token=token %}
 {% endautoescape %}
