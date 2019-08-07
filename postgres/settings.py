@@ -160,10 +160,10 @@ SITE_ID = 1
 # EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_SSL = True
+EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'kaustubhkrishna9031@gmail.com'
-EMAIL_HOST_PASSWORD = 'versatility2excel@619'
+EMAIL_HOST_PASSWORD = 'kaustubh_911'
 EMAIL_PORT = 587
 SERVER_EMAIL = 'kaustubhkrishna9031@gmail.com'
 
