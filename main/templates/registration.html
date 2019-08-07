@@ -1,75 +1,102 @@
-<!DOCTYPE html>
-{% load socialaccount %}
-{% providers_media_js %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registration</title>
-    {% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'css\bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'login.css' %}">
-</head>
-<body>
-<div id="wrapper">
-  <div id="left">
-    <div id="signin">
-      <div class="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/220px-Postgresql_elephant.svg.png" style="margin-left: 25%; width: 50%;">
-      </div>
-      <form role="form" action="#" method="post" enctype="multipart/form-data">
-          {% csrf_token %}
-        <div>
-          <input type="text" required placeholder="Username" style="font-size: 1em" name="username">
-        </div>
-          <br>
-        <div>
-          <input type="email" required placeholder="Email" style="font-size: 1em" name="email">
-        </div>
-        <div>
-          <br>
-          <input type="password" style="font-size: 1em" required placeholder="Password" name="password" id="id_password">
-        </div>
-          <br>
-          <div>
-              <input type="checkbox" id="box" onclick ="reveal()">
-              <label style="display: block; text-align: center; font-size: 1.4rem">show password</label>
-          </div>
-        <br>
-                {% if msg %}
-                <p class="error_message" style="text-align: center; color: red"><strong>{{ msg }}</strong></p>
-                {% endif %}
-        <br>
-        <button type="submit" class="primary-btn">Sign Up</button>
-      </form>
-      <div class="links">
-        <a href="{% provider_login_url 'google' %}">Sign up with Google</a>
-        <a href="{% provider_login_url 'facebook' %}">Sign up with Facebook</a>
-      </div>
-<!--      <div class="or">-->
-<!--        <hr class="bar" />-->
-<!--        <span>OR</span>-->
-<!--        <hr class="bar" />-->
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<!--    <div class="content-section">-->
+<!--        <form method="POST">-->
+<!--            {% csrf_token %}-->
+<!--            <fieldset class="form-group">-->
+<!--                <legend class="border-bottom mb-4">Join Today</legend>{% csrf_token %}-->
+<!--                {{ form|crispy }}-->
+<!--            </fieldset>-->
+<!--            <div class="form-group">-->
+<!--                <button class="btn btn-outline-info" type="submit">Sign Up</button>-->
+<!--            </div>-->
+<!--        </form>-->
+<!--        <div class="border-top pt-3">-->
+<!--            <small class="text-muted">-->
+<!--                Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>-->
+<!--            </small>-->
+<!--        </div>-->
+<!--    </div>-->
+<form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+            <button class="btn btn-primary">Register</button>
+        </form>
+{% endblock content %}
+
+<!--<!DOCTYPE html>-->
+<!--{% load socialaccount %}-->
+<!--{% providers_media_js %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <title>Registration</title>-->
+<!--    {% load staticfiles %}-->
+<!--    <link rel="stylesheet" href="{% static 'css\bootstrap.min.css' %}">-->
+<!--    <link rel="stylesheet" href="{% static 'login.css' %}">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="wrapper">-->
+<!--  <div id="left">-->
+<!--    <div id="signin">-->
+<!--      <div class="logo">-->
+<!--        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/220px-Postgresql_elephant.svg.png" style="margin-left: 25%; width: 50%;">-->
 <!--      </div>-->
-<!--      <a href="#" class="secondary-btn" style="font-size: 1.1em">Create an account</a>-->
-    </div>
-    <footer id="main-footer">
-      <p>Copyright &copy; 2018, ForEvaluation All Rights Reserved</p>
-      <div>
-        <a href="">Terms of Use</a> | <a href="">Privacy Policy</a>
-      </div>
-    </footer>
-  </div>
-</div>
-<script type="text/javascript">
-    function reveal()
-    {
-        if(document.getElementById('box').checked)
-            {document.getElementById("id_password").type='text';}
-        else
-            document.getElementById("id_password").type='password';
-    }
-</script>
-</body>
-</html>
+<!--      <form role="form" action="#" method="post" enctype="multipart/form-data">-->
+<!--          {% csrf_token %}-->
+<!--        <div>-->
+<!--          <input type="text" required placeholder="Username" style="font-size: 1em" name="username">-->
+<!--        </div>-->
+<!--          <br>-->
+<!--        <div>-->
+<!--          <input type="email" required placeholder="Email" style="font-size: 1em" name="email">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <br>-->
+<!--          <input type="password" style="font-size: 1em" required placeholder="Password" name="password" id="id_password">-->
+<!--        </div>-->
+<!--          <br>-->
+<!--          <div>-->
+<!--              <input type="checkbox" id="box" onclick ="reveal()">-->
+<!--              <label style="display: block; text-align: center; font-size: 1.4rem">show password</label>-->
+<!--          </div>-->
+<!--        <br>-->
+<!--                {% if msg %}-->
+<!--                <p class="error_message" style="text-align: center; color: red"><strong>{{ msg }}</strong></p>-->
+<!--                {% endif %}-->
+<!--        <br>-->
+<!--        <button type="submit" class="primary-btn">Sign Up</button>-->
+<!--      </form>-->
+<!--      <div class="links">-->
+<!--        <a href="{% provider_login_url 'google' %}">Sign up with Google</a>-->
+<!--        <a href="{% provider_login_url 'facebook' %}">Sign up with Facebook</a>-->
+<!--      </div>-->
+<!--&lt;!&ndash;      <div class="or">&ndash;&gt;-->
+<!--&lt;!&ndash;        <hr class="bar" />&ndash;&gt;-->
+<!--&lt;!&ndash;        <span>OR</span>&ndash;&gt;-->
+<!--&lt;!&ndash;        <hr class="bar" />&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <a href="#" class="secondary-btn" style="font-size: 1.1em">Create an account</a>&ndash;&gt;-->
+<!--    </div>-->
+<!--    <footer id="main-footer">-->
+<!--      <p>Copyright &copy; 2018, ForEvaluation All Rights Reserved</p>-->
+<!--      <div>-->
+<!--        <a href="">Terms of Use</a> | <a href="">Privacy Policy</a>-->
+<!--      </div>-->
+<!--    </footer>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<script type="text/javascript">-->
+<!--    function reveal()-->
+<!--    {-->
+<!--        if(document.getElementById('box').checked)-->
+<!--            {document.getElementById("id_password").type='text';}-->
+<!--        else-->
+<!--            document.getElementById("id_password").type='password';-->
+<!--    }-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
